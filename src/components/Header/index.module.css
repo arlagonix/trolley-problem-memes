@@ -1,0 +1,44 @@
+.outerContainer {
+  background-color: var(--secondary);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100svw;
+  transition: 0.15s ease-in-out;
+  height: calc(var(--headerHeight) + 2 * 0.5rem);
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  max-width: min(var(--width), calc(100% - 0.5rem * 2));
+  margin: 0 auto;
+  min-height: var(--headerHeight);
+
+  /* https://stackoverflow.com/a/40347671/19449790 */
+  /* Helps to avoid header moving from side to side when a scrhoolbar appears / disappears */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--neutral-0);
+  flex-grow: 1;
+  text-align: left;
+}
+
+@media (width < 500px) {
+  .header {
+    font-size: 20px;
+  }
+}
+
+.moveUp {
+  translate: 0 -100%;
+}

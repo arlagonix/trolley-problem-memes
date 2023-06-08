@@ -1,0 +1,17 @@
+.container {
+  max-width: min(var(--width), calc(100% - 0.5rem * 2));
+  margin: var(--headerHeight) auto 0;
+  padding-bottom: 0.5rem;
+}
+
+.subheader {
+  padding: 1rem 0;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+@media (width < 500px) {
+  .subheader {
+    font-size: 32px;
+  }
+}
