@@ -1,6 +1,4 @@
 import classes from "./index.module.css";
-// import useEventListener from "../../hooks/useEventListener";
-// import { useRef, useState } from "react";
 import clsx from "clsx";
 import {
   FormControl,
@@ -20,18 +18,6 @@ const Header = ({
   currentFilter,
   setCurrentFilter,
 }: HeaderProps) => {
-  // I just don't want to delete this code
-  // Spent quite some time on that...
-
-  // const [didScrollUp, setDidScrollUp] = useState(false);
-  // const previousScrollY = useRef(window.scrollY);
-
-  // inspired by https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
-  // useEventListener("scroll", () => {
-  //   setDidScrollUp(window.scrollY > previousScrollY.current);
-  //   previousScrollY.current = window.scrollY;
-  // });
-
   const handleChange = (event: SelectChangeEvent) => {
     setCurrentFilter(event.target.value);
   };

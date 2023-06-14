@@ -11,6 +11,7 @@ import "yet-another-react-lightbox/plugins/counter.css";
 import Download from "yet-another-react-lightbox/plugins/download";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import CustomPhotoRenderer from "../CustomPhotoRenderer";
 
 interface IndexListType {
   [year: string]: number;
@@ -81,6 +82,7 @@ const Gallery = ({ currentFilter }: GalleryProps) => {
                 onClick={({ index }) => indexListHandler(year, index)}
                 targetRowHeight={300}
                 spacing={4}
+                renderPhoto={CustomPhotoRenderer}
               />
               <Lightbox
                 open={indexList[year] !== -1}

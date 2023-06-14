@@ -14,8 +14,10 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.3",
+    "blurhash": "^2.0.5",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
+    "react-blurhash": "^0.3.0",
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.2.2",
     "yet-another-react-lightbox": "^3.10.0"
