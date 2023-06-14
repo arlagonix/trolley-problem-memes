@@ -3,11 +3,13 @@
   border: 1px solid transparent;
 }
 
-.photo:hover {
-  scale: 1.1;
-  border-color: var(--primary);
-  box-shadow: 0 0 128px var(--primary);
-  z-index: 1;
+@media (hover: hover) {
+  .photo:hover {
+    scale: 1.1;
+    border-color: var(--primary);
+    box-shadow: 0 0 128px var(--primary);
+    z-index: 1;
+  }
 }
 
 .blurredPlacehodler {

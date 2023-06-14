@@ -35,7 +35,7 @@
 
 body {
   background-color: var(--primary);
-  min-height: 100vh;
+  min-height: 100svh;
 
   /* https://stackoverflow.com/a/7579039/19449790 */
   /* Helps to avoid margin collapse */
