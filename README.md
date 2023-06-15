@@ -57,8 +57,8 @@
 </p>
 
 <p align="center">
-  <img src="./docs/results/small_1.png" width="30%">
-  <img src="./docs/results/small_2.png" width="30%">
+  <img src="./docs/results/small_1.png" width="45%">
+  <img src="./docs/results/small_2.png" width="45%">
 </p>
 
 ## ℹ️ About
