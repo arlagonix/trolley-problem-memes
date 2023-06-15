@@ -5,11 +5,16 @@ import { useEffect, useState } from "react";
 
 // https://react-photo-album.com/documentation#RenderPhoto
 // Render Photo example
-
-// function CustomPhotoRendererWithHash = (blurHash: string) =>
-
-const CustomPhotoRenderer = (props: RenderPhotoProps) => {
-  console.log(props);
+const CustomPhotoRenderer = ({
+  /** Basic info about a photo: width, height, src */
+  photo,
+  /** Required for styles to properly work */
+  wrapperStyle,
+  /** Props passed from `PhotoAlbum`, I need only `onClick` */
+  imageProps,
+  /** I guess that's the dimensions of an image in the final layout */
+  layout,
+}: RenderPhotoProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Inspired by https://www.youtube.com/watch?v=VyUJUD5gyoo
@@ -18,14 +23,14 @@ const CustomPhotoRenderer = (props: RenderPhotoProps) => {
     img.onload = () => {
       setImageLoaded(true);
     };
-    img.src = props.photo.src;
-  }, [props.photo.src]);
+    img.src = photo.src;
+  }, [photo.src]);
 
   return (
     <div
-      style={{ position: "relative", ...props.wrapperStyle }}
+      style={{ position: "relative", ...wrapperStyle }}
       className={classes.photo}
-      onClick={props.imageProps.onClick}
+      onClick={imageProps.onClick}
     >
       <div
         style={{ opacity: imageLoaded ? "0" : "1" }}
@@ -33,16 +38,16 @@ const CustomPhotoRenderer = (props: RenderPhotoProps) => {
       >
         <Blurhash
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          hash={(props.photo as any).blurHash}
-          width={props.layout.width}
-          height={props.layout.height}
+          hash={(photo as any).blurHash}
+          width={layout.width}
+          height={layout.height}
           resolutionX={64}
           resolutionY={64}
           punch={1}
         />
       </div>
       <img
-        src={props.photo.src}
+        src={photo.src}
         loading="lazy"
         style={{ opacity: !imageLoaded ? "0" : "1" }}
         className={classes.image}

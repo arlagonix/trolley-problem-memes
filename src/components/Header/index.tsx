@@ -8,8 +8,11 @@ import {
 } from "@mui/material";
 
 interface HeaderProps {
+  /** Values displayed in the dropdown menu */
   filterValues: string[];
+  /** The currently chosen value */
   currentFilter: string;
+  /** Setter for a new value */
   setCurrentFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 

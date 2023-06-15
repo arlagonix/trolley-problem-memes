@@ -1,3 +1,5 @@
+// Probably there is some way to avoid that monstrous imports...
+// Though I couldn't find it... So sad...
 import photo001 from "./assets/gallery/2019_01_19.jpg";
 import photo002 from "./assets/gallery/2020_02_23.jpg";
 import photo003 from "./assets/gallery/2020_04_02.jpg";
@@ -423,6 +425,7 @@ export const yearsList: string[] = Array.from(
 ).sort((a, b) => +b - +a);
 
 // The code below allows to automate manual filling of the array above
+// Most probably I will never need to use it...
 
 // import { getImageSize } from "react-image-size";
 
