@@ -38,6 +38,18 @@ const Header = ({
                 onChange={handleChange}
                 autoWidth
                 defaultValue={filterValues[0]}
+                sx={{
+                  "fieldset.MuiOutlinedInput-notchedOutline.MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "rgba(255, 255, 255, 0.23)",
+                      borderWidth: "1px",
+                    },
+                  "&:hover fieldset.MuiOutlinedInput-notchedOutline.MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "white",
+                      borderWidth: "1px",
+                    },
+                }}
               >
                 {filterValues.map((item) => (
                   <MenuItem value={item} key={item}>
