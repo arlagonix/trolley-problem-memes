@@ -2,6 +2,7 @@ import { RenderPhotoProps } from "react-photo-album";
 import classes from "./index.module.css";
 import { Blurhash } from "react-blurhash";
 import { useEffect, useState } from "react";
+import ZoomInIcon from "@mui/icons-material/ZoomIn";
 
 // https://react-photo-album.com/documentation#RenderPhoto
 // Render Photo example
@@ -28,10 +29,18 @@ const CustomPhotoRenderer = ({
 
   return (
     <div
-      style={{ position: "relative", ...wrapperStyle }}
+      style={{ position: "relative", ...wrapperStyle, cursor: "zoom-in" }}
       className={classes.photo}
       onClick={imageProps.onClick}
     >
+      <div className={classes.zoomIn}>
+        <ZoomInIcon
+          style={{
+            width: "100px",
+            height: "100px",
+          }}
+        />
+      </div>
       <div
         style={{ opacity: imageLoaded ? "0" : "1" }}
         className={classes.blurredPlacehodler}
